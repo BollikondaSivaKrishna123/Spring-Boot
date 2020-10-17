@@ -1,0 +1,24 @@
+
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+	id 'java'
+    apply plugin : "io.spring.dependency-management"
+}
+ 
+ 
+  dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-starter-parent:1.4.5.RELEASE"
+    }
+}
+repositories {
+   
+    jcenter()
+}
+
+dependencies {
+  // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.4.RELEASE'
+  
+}
